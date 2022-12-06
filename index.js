@@ -1,6 +1,5 @@
 const inquirer = require("inquirer")
 const fs = require("fs")
-const Employee = require('./lib/Employee')
 const Engineer = require('./lib/Engineer')
 const Intern = require('./lib/Intern')
 const Manager = require('./lib/Manager')
@@ -56,7 +55,7 @@ const promptSelection = () => {
                     promptIntern();
                     break;
                 default:
-                    buildTeam();
+                    outputTeam();
             }
         });
 };
@@ -124,9 +123,9 @@ const promptIntern = () => {
 };
 
 
-    // .then((response) => {
-    //     let EmployeeText = Employee(response);
-    //     fs.writeFile('index.html', EmployeeText, (err) =>
-    //         err ? console.error(err) : console.log('Success!')
-    //     );
-    // })
+const outputTeam = () => {
+fs.writeFileSync(outputPath, generatePage(teamRoster), "utf-8");
+
+}
+
+promptManager();
