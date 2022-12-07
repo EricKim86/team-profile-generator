@@ -1,14 +1,14 @@
 const generateRoster = (team) => {
     const html = [];
 
-//create manager card
+    //create manager card
     const createManager = manager => {
 
-    let managerSection = `
+        let managerSection = `
 
 <div class="card-custom card mb-3" style="max-width: 18rem;">
 <div class="header bg-primary">${manager.name}</div>
-<div class="header bg-primary">Manager</div>
+<div class="header bg-primary"><i class="fa fa-hand-grab-o" style="font-size:24px"></i>Manager</div>
 <div class="card-body">
     <p class="card-body">Manager ID: ${manager.id}</p>
     <p class="card-body">Email: <a href="mailto:email@example.com">${manager.email}</a></p>
@@ -19,13 +19,13 @@ const generateRoster = (team) => {
         html.push(managerSection);
     }
 
-//create engineer card
+    //create engineer card
     const createEngineer = engineer => {
 
         let engineerSection = `
 <div class="card-custom card mb-3" style="max-width: 18rem;">
 <div class="header bg-primary">${engineer.name}</div>
-<div class="header bg-primary">Engineer</div>
+<div class="header bg-primary"><i class="fa fa-cog fa-spin"></i>Engineer</div>
 <div class="card-body">
     <p class="card-body">Engineer ID: ${engineer.id}</p>
     <p class="card-body">Email: <a href="mailto:email@example.com">${engineer.email}</a></p>
@@ -36,13 +36,13 @@ const generateRoster = (team) => {
         html.push(engineerSection);
     }
 
-//create intern card
+    //create intern card
     const createIntern = intern => {
 
         let internSection = `
 <div class="card-custom card mb-3" style="max-width: 18rem;">
 <div class="header bg-primary">${intern.name}</div>
-<div class="header bg-primary">Intern</div>
+<div class="header bg-primary"><i class="fa fa-graduation-cap" style="font-size:24px"></i>Intern</div>
 <div class="card-body">
     <p class="card-body">Intern ID: ${intern.id}</p>
     <p class="card-body">Email: <a href="mailto:email@example.com">${intern.email}</a></p>
@@ -52,7 +52,7 @@ const generateRoster = (team) => {
     `
         html.push(internSection);
     }
-//create loop to create cards based on roles and number of inputs
+    //create loop to create cards based on roles and number of inputs
     for (let i = 0; i < team.length; i++) {
         if (team[i].getRole() === "Manager") {
             createManager(team[i]);
@@ -79,6 +79,7 @@ module.exports = team => {
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="Description" content="Enter your description here" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./style.css">
         <title>Team Roster Generator</title>
         </head>
