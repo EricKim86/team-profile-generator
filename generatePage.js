@@ -8,7 +8,7 @@ const generateRoster = (team) => {
 
 <div class="card-custom card mb-3" style="max-width: 18rem;">
 <div class="header bg-primary">${manager.name}</div>
-<div class="header bg-primary"><i class="fa fa-hand-grab-o" style="font-size:24px"></i>Manager</div>
+<div class="header bg-primary"><i class="fa fa-hand-grab-o" style="font-size:24px"></i> Manager</div>
 <div class="card-body">
     <p class="card-body">Manager ID: ${manager.id}</p>
     <p class="card-body">Email: <a href="mailto:email@example.com">${manager.email}</a></p>
@@ -25,7 +25,7 @@ const generateRoster = (team) => {
         let engineerSection = `
 <div class="card-custom card mb-3" style="max-width: 18rem;">
 <div class="header bg-primary">${engineer.name}</div>
-<div class="header bg-primary"><i class="fa fa-cog fa-spin"></i>Engineer</div>
+<div class="header bg-primary"><i class="fa fa-cog fa-spin"></i> Engineer</div>
 <div class="card-body">
     <p class="card-body">Engineer ID: ${engineer.id}</p>
     <p class="card-body">Email: <a href="mailto:email@example.com">${engineer.email}</a></p>
@@ -42,7 +42,7 @@ const generateRoster = (team) => {
         let internSection = `
 <div class="card-custom card mb-3" style="max-width: 18rem;">
 <div class="header bg-primary">${intern.name}</div>
-<div class="header bg-primary"><i class="fa fa-graduation-cap" style="font-size:24px"></i>Intern</div>
+<div class="header bg-primary"><i class="fa fa-graduation-cap" style="font-size:24px"></i> Intern</div>
 <div class="card-body">
     <p class="card-body">Intern ID: ${intern.id}</p>
     <p class="card-body">Email: <a href="mailto:email@example.com">${intern.email}</a></p>
@@ -84,7 +84,7 @@ module.exports = team => {
         <title>Team Roster Generator</title>
         </head>
         <body>
-            <nav class="navbar navbar-light bg-light">
+            <nav class="navbar navbar-dark bg-success">
                 <div class="container-fluid">
                     <span class="navbar-brand mb-0 h1">My Team Roster</span>
                 </div>

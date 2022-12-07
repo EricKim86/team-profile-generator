@@ -12,6 +12,8 @@ body {
     margin: 20px;
     border: 1px solid black;
     width: 300px;
+    border-radius: 5px;
+    box-shadow: 5px 10px;
 }
 
 .header {
