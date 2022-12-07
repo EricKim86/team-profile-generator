@@ -15,7 +15,8 @@
 
   ## Installation
   The user must have node.js installed. <br/>
-  The user must install the node package manager by typing "npi i" into the console.
+  The user must install the node package manager by typing "npm i" into the console. <br/>
+  This application makes use of Jest (29.3.1) and Inquirer (8.2.5).
 
 
   ## Usage
