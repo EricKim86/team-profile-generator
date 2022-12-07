@@ -129,9 +129,11 @@ const promptIntern = () => {
 
 const outputTeam = () => {
     console.log(teamRoster);
-fs.writeFile("roster.html", generatePage(teamRoster), function (err) {
+fs.writeFile("./dist/roster.html", generatePage(teamRoster), function (err) {
     if (err) return console.log(err);
 })
 }
+
+//start manager questions upon launch
 
 promptManager();
