@@ -4,13 +4,12 @@
  
 
   ## Description
-  This application allows the user to generate a team roster including a single Manager, engineer(s), and intern(s).  Each role within the roster will have unique information populated by the user.
+  This application allows a user to generate a team roster including a single Manager, engineer(s), and intern(s).  Each role within the roster will have unique information populated by the user from a series of prompts.
 
   ## Table of Contents
     
   - [Installation](#installation)
   - [Usage](#usage)
-  - [Credit](#credit)
   - [How to Contribute](#contribute)
 
 
