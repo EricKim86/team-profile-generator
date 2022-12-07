@@ -1,11 +1,12 @@
 const inquirer = require("inquirer")
 const fs = require("fs")
-const Engineer = require('./lib/Engineer')
-const Intern = require('./lib/Intern')
-const Manager = require('./lib/Manager')
-
+const Engineer = require('./lib/engineer')
+const Intern = require('./lib/intern')
+const Manager = require('./lib/manager')
+const generatePage = require('./generatePage')
 const teamRoster = [];
 
+//manager questions
 const promptManager = () => {
     return inquirer.prompt([
         {
@@ -37,6 +38,7 @@ const promptManager = () => {
         })
 };
 
+//role creation selections & finish prompt
 const promptSelection = () => {
     return inquirer.prompt([
         {
@@ -54,12 +56,13 @@ const promptSelection = () => {
                 case "Intern":
                     promptIntern();
                     break;
-                default:
-                    outputTeam();
+                case "I do not have any other team members to add":
+                outputTeam();
             }
         });
 };
 
+//engineer questions
 const promptEngineer = () => {
     return inquirer.prompt([
         {
@@ -91,6 +94,7 @@ const promptEngineer = () => {
         })
 };
 
+//intern questions
 const promptIntern = () => {
     return inquirer.prompt([
         {
@@ -124,8 +128,10 @@ const promptIntern = () => {
 
 
 const outputTeam = () => {
-fs.writeFileSync(outputPath, generatePage(teamRoster), "utf-8");
-
+    console.log(teamRoster);
+fs.writeFile("roster.html", generatePage(teamRoster), function (err) {
+    if (err) return console.log(err);
+})
 }
 
 promptManager();
