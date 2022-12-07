@@ -6,13 +6,13 @@ const generateRoster = (team) => {
 
     let managerSection = `
 
-<div class="card-custom card border-success mb-3" style="max-width: 18rem;">
-<div class="card-header bg-transparent border-success">Manager</div>
-<div class="card-body text-success">
-<h5 class="card-title">${manager.name}</h5>
-    <p class="card-text">Manager Name: ${manager.id}</p>
-    <p class="card-text">Email: ${manager.email}</p>
-    <p class="card-text">Office Number: ${manager.officeNumber}</p>
+<div class="card-custom card mb-3" style="max-width: 18rem;">
+<div class="header bg-primary">${manager.name}</div>
+<div class="header bg-primary">Manager</div>
+<div class="card-body">
+    <p class="card-body">Manager ID: ${manager.id}</p>
+    <p class="card-body">Email: ${manager.email}</p>
+    <p class="card-body">Office Number: ${manager.officeNumber}</p>
 </div>
 </div>
     `
@@ -23,13 +23,13 @@ const generateRoster = (team) => {
     const createEngineer = engineer => {
 
         let engineerSection = `
-<div class="card-custom card border-success mb-3" style="max-width: 18rem;">
-<div class="card-header bg-transparent border-success">Engineer</div>
-<div class="card-body text-success">
-<h5 class="card-title">${engineer.name}</h5>
-    <p class="card-text">Engineer Name: ${engineer.id}</p>
-    <p class="card-text">Email: ${engineer.email}</p>
-    <p class="card-text">GitHub: ${engineer.github}</p>
+<div class="card-custom card mb-3" style="max-width: 18rem;">
+<div class="header bg-primary">${engineer.name}</div>
+<div class="header bg-primary">Engineer</div>
+<div class="card-body">
+    <p class="card-body">Engineer ID: ${engineer.id}</p>
+    <p class="card-body">Email: ${engineer.email}</p>
+    <p class="card-body">GitHub: ${engineer.github}</p>
 </div>
 </div>
     `
@@ -40,13 +40,13 @@ const generateRoster = (team) => {
     const createIntern = intern => {
 
         let internSection = `
-<div class="card-custom card border-success mb-3" style="max-width: 18rem;">
-<div class="card-header bg-transparent border-success">Intern</div>
-<div class="card-body text-success">
-<h5 class="card-title">${intern.name}</h5>
-    <p class="card-text">Intern Name: ${intern.id}</p>
-    <p class="card-text">Email: ${intern.email}</p>
-    <p class="card-text">School: ${intern.school}</p>
+<div class="card-custom card mb-3" style="max-width: 18rem;">
+<div class="header bg-primary">${intern.name}</div>
+<div class="header bg-primary">Intern</div>
+<div class="card-body">
+    <p class="card-body">Intern ID: ${intern.id}</p>
+    <p class="card-body">Email: ${intern.email}</p>
+    <p class="card-body">School: ${intern.school}</p>
 </div>
 </div>
     `

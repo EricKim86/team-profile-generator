@@ -5,4 +5,16 @@
 
 .card-custom {
     margin: 20px;
+    border: 1px solid black;
+}
+
+.header {
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.card-body {
+    border: 1px solid black;
+    color: black !important;
 }
